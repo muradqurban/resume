@@ -101,4 +101,4 @@ const SendFeedback = () => {
   );
 }
 
-export defualt SendFeedback
+export default SendFeedback;
