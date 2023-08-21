@@ -37,9 +37,9 @@ const SendFeedback = () => {
       </div>
       <div className="md:w-[50%] py-10 flex justify-center items-center">
         {submited ? (
-      <div className="p-15 bg-indigo-200 dark:bg-indigo-700"><p className="font-italic text-xl hover:text-sky-800"></div>
-            Təşəkkür edirəm.
-          </p>
+      <div className="p-15 bg-indigo-200 dark:bg-indigo-700"><p className="font-italic text-xl hover:text-sky-800">            Təşəkkür edirəm.
+          </p></div>
+
         ) : (
           <form
             onSubmit={formik.handleSubmit}
