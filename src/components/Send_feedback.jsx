@@ -37,7 +37,7 @@ const SendFeedback = () => {
       </div>
       <div className="md:w-[50%] py-10 flex justify-center items-center">
         {submited ? (
-          <p className="font-italic text-xl hover:text-sky-800">
+      <div className="p-15 bg-indigo-200 dark:bg-indigo-700"><p className="font-italic text-xl hover:text-sky-800"></div>
             Təşəkkür edirəm.
           </p>
         ) : (
@@ -45,12 +45,11 @@ const SendFeedback = () => {
             onSubmit={formik.handleSubmit}
             className="w-[100%] flex flex-col gap-4 bg-indigo-400 dark:bg-indigo-700 p-2"
             name="contact"
+            action="/contact"
             method="POST"
             data-netlify="true"
             data-netlify-recaptcha="true"
-            onSubmit="submit"
           >
-            <input type="hidden" name="form-name" value="contact" />
 
             <input
               className={inputStyle}
