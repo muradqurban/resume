@@ -6,7 +6,7 @@ import RoadMap from "./components/RoadMap";
 import Article from "./components/Article";
 import ShareCode from "./components/Code";
 import Footer from "./components/Footer";
-import Send_feedback from "./components/Send_feedback";
+import SendFeedback from "./components/SendFeedback";
 
 function App() {
   const themeLocalStorage = localStorage.getItem("selectedTheme");
@@ -48,7 +48,7 @@ function App() {
         <RoadMap />
         <Article />
         <ShareCode />
-        <Send_feedback />
+        <SendFeedback />
         <Footer />
       </div>
     </MainContext.Provider>
