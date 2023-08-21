@@ -6,7 +6,7 @@ import RoadMap from "./components/RoadMap";
 import Article from "./components/Article";
 import ShareCode from "./components/Code";
 import Footer from "./components/Footer";
-import SendFeedback from "./components/SendFeedback";
+import SendFeedback from "./components/Send_feedback";
 
 function App() {
   const themeLocalStorage = localStorage.getItem("selectedTheme");
