@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "HTML",
+    "description": "HTML struktorunu və kodlarını ilə tanış oldum.",
+    "imageSrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg",
+    "validate": "green",
+    "dateData": "Mart 2023"
+  },
+  {
+    "id": 2,
+    "title": "CSS",
+    "description": "HTML elementlərini  gözəlləşdirməyin yollarını gördüm.",
+    "imageSrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg",
+    "validate": "green",
+    "dateData": "Aprel 2023"
+  },
+  {
+    "id": 3,
+    "title": "Javascript",
+    "description": "Veb səhvələrdə və aplikasiyalarda manupilasiyanı öyrəndim.",
+    "imageSrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+    "validate": "green",
+    "dateData": "May 2023"
+  },
+  {
+    "id": 4,
+    "title": "PHP",
+    "description": "Proyektlərin arxasında gedən prosesləri öyrəndim.",
+    "imageSrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg",
+    "validate": "green",
+    "dateData": "Iyun 2023"
+  },
+  {
+    "id": 5,
+    "title": "Laravel",
+    "description": "Qarmaşıq və uzun olacaq kod bloklarını səliqəli və sürətli olduğun gördüm.",
+    "imageSrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
+    "validate": "red",
+    "dateData": "Iyul 2023"
+  },
+  {
+    "id": 6,
+    "title": "ReactJS",
+    "description": "Öz-özünə kifəyət edən bir sistem, vahid mərkəz və performans.",
+    "imageSrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "validate": "skyblue",
+    "dateData": "Avqust 2023"
+  },
+  {
+    "id": 7,
+    "title": "NodeJS Back-END",
+    "description": "Front-End və Back-End bir program dili ilə hazırlmağın mümkün olması, möhtəşəm texnologiya.",
+    "imageSrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    "validate": "orange",
+    "dateData": "Tezliklə"
+  },
+  {
+    "id": 8,
+    "title": "Kotlin",
+    "description": "Mobil dünya .",
+    "imageSrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+    "validate": "orange",
+    "dateData": "Tezliklə"
+  },
+  {
+    "id": 9,
+    "title": "Python",
+    "description": "Böyük məlumatlar, 'machine learning' və süni intelekt.",
+    "imageSrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    "validate": "orange",
+    "dateData": "Tezliklə"
+  }
+]
