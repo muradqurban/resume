@@ -48,6 +48,7 @@ const SendFeedback = () => {
             method="POST"
             data-netlify="true"
             data-netlify-recaptcha="true"
+            onSubmit="submit"
           >
             <input type="hidden" name="form-name" value="contact" />
 
