@@ -1,57 +1,49 @@
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import React, { useEffect, useState } from "react";
-import Card from "./Card";
-import roadmap_data from "../data/roadmap_data.json";
-import { BsFillCalendarCheckFill } from "react-icons/bs";
-import { Element } from "react-scroll";
+import { useEffect, useState } from 'react';
+import Card from './Card';
+import roadmapData from '../data/roadmap_data.json';
+import { BsFillCalendarCheckFill } from 'react-icons/bs';
+import { Element } from 'react-scroll';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-const RoadMap = () => {
+const RoadMap: React.FC = () => {
   useEffect(() => {
-    const container = document.querySelector(".grid[data-spotlight]");
-    const cards = Array.from(container.children);
+    const container = document.querySelector('.grid[data-spotlight]') as HTMLElement | null;
+    const cards = Array.from(container?.children || []);
 
     const initContainer = () => {
-      containerSize.w = container.offsetWidth;
-      containerSize.h = container.offsetHeight;
+      containerSize.w = container?.offsetWidth || 0;
+      containerSize.h = container?.offsetHeight || 0;
     };
 
-    const onMouseMove = (event) => {
+    const onMouseMove = (event: MouseEvent) => {
       const { clientX, clientY } = event;
-      const rect = container.getBoundingClientRect();
+      const rect = container?.getBoundingClientRect();
+      if (!rect) return;
+
       const x = clientX - rect.left;
       const y = clientY - rect.top;
-      const inside =
-        x < containerSize.w && x > 0 && y < containerSize.h && y > 0;
+      const inside = x < containerSize.w && x > 0 && y < containerSize.h && y > 0;
     };
 
     const containerSize = { w: 0, h: 0 };
 
     initContainer();
-    window.addEventListener("resize", initContainer);
-    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener('resize', initContainer);
+    window.addEventListener('mousemove', onMouseMove);
 
     return () => {
-      window.removeEventListener("resize", initContainer);
-      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener('resize', initContainer);
+      window.removeEventListener('mousemove', onMouseMove);
     };
   }, []);
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 667);
-
+  const [isMobileScreen, setIsMobileScreen] = useState(false);
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 767);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    setIsMobileScreen(window.innerWidth <= 768);
   }, []);
 
-  const cardsPerSlide = isMobile ? 1 : 3;
+  const cardsPerSlide = isMobileScreen ? 1 : 3;
 
   return (
     <Element name="roadmap" className="relative font-inter antialiased mt-4">
@@ -71,15 +63,11 @@ const RoadMap = () => {
               swipeable={true}
             >
               {(() => {
-                const slides = [];
-                for (let i = 0; i < roadmap_data.length; i += cardsPerSlide) {
-                  const cards = [];
-                  for (
-                    let j = i;
-                    j < i + cardsPerSlide && j < roadmap_data.length;
-                    j++
-                  ) {
-                    const card = roadmap_data[j];
+                const slides: JSX.Element[] = [];
+                for (let i = 0; i < roadmapData.length; i += cardsPerSlide) {
+                  const cards: JSX.Element[] = [];
+                  for (let j = i; j < i + cardsPerSlide && j < roadmapData.length; j++) {
+                    const card = roadmapData[j];
                     cards.push(
                       <div key={card.id}>
                         <Card

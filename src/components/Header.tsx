@@ -1,18 +1,35 @@
-import { MainContext, useContext } from "../context";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { MdDarkMode, MdWbSunny } from "react-icons/md";
-import { useState } from "react";
+import React,{ useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import { useSelector } from "react-redux";
+import { changeTheme } from "@/store";
+import Image from "next/image";
 
 const Header = () => {
-  const { theme, setTheme } = useContext(MainContext);
-  const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
-  const [menu, setMenu] = useState("close");
-  const handleMenuSwitch = () => {
-    setMenu(menu === "close" ? "open" : "close");
-  };
+    const theme = useSelector((state:any)=>state.theme.theme)
+
+    useEffect(() => {
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    }, [theme]);
+
+
+    const handleThemeSwitch = () => {
+      if(theme === "dark") {
+        changeTheme("light");
+      } else if(theme === "light") {
+        changeTheme("dark");
+
+      }
+    };
+    const [menu, setMenu] = useState("close");
+    const handleMenuSwitch = () => {
+        setMenu(menu === "close" ? "open" : "close");
+    };
   return (
     <div
       className="bg-gradient-to-bl from-indigo-300 via-cyan-600 to-purple-600 dark:bg-gradient-to-tr
@@ -20,10 +37,12 @@ const Header = () => {
     >
       <div className="flex justify-between items-center">
         <span className="text-2xl cursor-pointer">
-          <img
-            src="../assets/img/Logo.png"
+          <Image
+            width={200}
+            height={200}
+            alt={"logo"}
+            src="/assets/img/Logo.png"
             className="h-11 inline hover:scale-105 duration-300"
-            alt=""
           />
         </span>
         <span
