@@ -7,14 +7,11 @@ import { BsFillCalendarCheckFill } from "react-icons/bs";
 import { Element } from "react-scroll";
 
 const RoadMap = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
   useEffect(() => {
     const container = document.querySelector(".grid[data-spotlight]");
     const cards = Array.from(container.children);
 
     const initContainer = () => {
-      const rect = container.getBoundingClientRect();
       containerSize.w = container.offsetWidth;
       containerSize.h = container.offsetHeight;
     };
@@ -26,15 +23,6 @@ const RoadMap = () => {
       const y = clientY - rect.top;
       const inside =
         x < containerSize.w && x > 0 && y < containerSize.h && y > 0;
-      if (inside) {
-        setMousePosition({ x, y });
-        cards.forEach((card) => {
-          const cardX = -(card.getBoundingClientRect().left - rect.left) + x;
-          const cardY = -(card.getBoundingClientRect().top - rect.top) + y;
-          card.style.setProperty("--mouse-x", `${cardX}px`);
-          card.style.setProperty("--mouse-y", `${cardY}px`);
-        });
-      }
     };
 
     const containerSize = { w: 0, h: 0 };

@@ -2,7 +2,7 @@ import { useFormik } from "formik";
 import { useState } from "react";
 import { Element } from "react-scroll";
 
-export default function Send_mail() {
+const Send_feedback = () => {
   const timestamp = new Date().toLocaleString();
   const [submited, setSubmited] = useState(false);
   const inputStyle =
@@ -99,4 +99,6 @@ export default function Send_mail() {
       </div>
     </Element>
   );
-}
+};
+
+export default Send_feedback;
