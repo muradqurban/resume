@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/RoadMap.tsx
 import { useEffect, useState } from 'react';
 import Card from './Card';
 import roadmapData from '../data/roadmap_data.json';
@@ -5,6 +6,17 @@ import { BsFillCalendarCheckFill } from 'react-icons/bs';
 import { Element } from 'react-scroll';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+=======
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import React, { useEffect, useState } from "react";
+import Card from "./Card";
+import roadmap_data from "../data/roadmap_data.json";
+import { BsFillCalendarCheckFill } from "react-icons/bs";
+import { Element } from "react-scroll";
+
+const RoadMap = () => {
+>>>>>>> 17e9392a9f6a8aed9e1789cf88735348bf40345a:src/components/RoadMap.jsx
 
 const RoadMap: React.FC = () => {
   useEffect(() => {
@@ -12,8 +24,13 @@ const RoadMap: React.FC = () => {
     const cards = Array.from(container?.children || []);
 
     const initContainer = () => {
+<<<<<<< HEAD:src/components/RoadMap.tsx
       containerSize.w = container?.offsetWidth || 0;
       containerSize.h = container?.offsetHeight || 0;
+=======
+      containerSize.w = container.offsetWidth;
+      containerSize.h = container.offsetHeight;
+>>>>>>> 17e9392a9f6a8aed9e1789cf88735348bf40345a:src/components/RoadMap.jsx
     };
 
     const onMouseMove = (event: MouseEvent) => {
@@ -23,7 +40,12 @@ const RoadMap: React.FC = () => {
 
       const x = clientX - rect.left;
       const y = clientY - rect.top;
+<<<<<<< HEAD:src/components/RoadMap.tsx
       const inside = x < containerSize.w && x > 0 && y < containerSize.h && y > 0;
+=======
+      const inside =
+        x < containerSize.w && x > 0 && y < containerSize.h && y > 0;
+>>>>>>> 17e9392a9f6a8aed9e1789cf88735348bf40345a:src/components/RoadMap.jsx
     };
 
     const containerSize = { w: 0, h: 0 };
