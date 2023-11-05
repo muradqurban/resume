@@ -33,10 +33,10 @@ const Info = () => {
           İT sahəsinə marağım məktəb illərindən olub. Lakin təhsil aldığım
           ixtisas məni bu sahədən muvəqqəti uzaqlaşdırmışdı. Bu il mart ayında
           Coders Azərbaycan tədris mərkəzinin dövlət dəstəyi ilə təşlil etdiyi
-          "Full-Stack developer" (HTML, CSS, JS, PHP, LARAVEL ) kursunda iştirak
-          edərək "web development" ilkin anlayışları və yanaşmaları öyrəndim.
-          Hədəfim Full-stack Javascript developer olmaqdır. Hazırda "Studorium
-          consulting" şirkəti üçün reactJS ilə web sayıt hazırlayıram.
+          &quot;Full-Stack developer &quot; (HTML, CSS, JS, PHP, LARAVEL ) kursunda iştirak
+          edərək  &quot;web development &quot; ilkin anlayışları və yanaşmaları öyrəndim.
+          Hədəfim Full-stack Javascript developer olmaqdır. Hazırda  &quot;Studorium
+          consulting &quot; şirkəti üçün nextJs ilə hazırladığım saytın testləri davam edir.
         </p>
       </div>
     </Element>
