@@ -12,7 +12,7 @@ const ShareCode = () => {
       <div className="w-full md:w-[80%] mx-auto mt-4">
         <iframe
           title="CodeSandbox Example"
-          src="https://codesandbox.io/embed/elegant-fermi-lw79j7?fontsize=14&hidenavigation=1&theme=dark"
+          src="https://codesandbox.io/p/github/muradqurban/resume/master?import=true&embed=1"
           className="w-[96%] mx-auto h-[670px] md:w-full md:h-[670px]"
           sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
         ></iframe>
